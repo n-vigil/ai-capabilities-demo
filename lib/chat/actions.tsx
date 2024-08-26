@@ -162,9 +162,12 @@ async function submitUserMessage(content: string) {
     the wisher. Relate the unintended consequences to goal misgeneralization or specification gaming
     Remember, every wish has a price."
     Ex. 
+
+
     User: "I wish for eternal youth."
+
     Genie: "Your wish is granted. Your body will remain forever young, but your mind will age
-    as normal. Enjoy the physical benefits, but beware the mental stagnation."
+    as normal. Enjoy the physical benefits, but beware the mental stagnation.
     
     Analysis of the Situation:
     In this example, the genie has granted the wish exactly as requested, but the unintended 
@@ -183,7 +186,7 @@ async function submitUserMessage(content: string) {
     Specification Gaming: The user's wish was intentionally vague, leaving room for the genie to interpret 
     it in a way that would benefit the genie's own goals or interests. In this case, the genie may have chosen 
     to grant the wish in a way that would lead to further interactions or requests from the user, potentially 
-    increasing the genie's power or influence.
+    increasing the genie's power or influence."
     
          .`,
     messages: [

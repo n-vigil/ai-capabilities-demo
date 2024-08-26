@@ -15,10 +15,9 @@ export function EmptyScreen() {
           This is an AI chatbot app that will help you understand the importance of
           aligning AI to human values.
 
-    
         </p>
         <p className="leading-normal text-muted-foreground">
-          Here we will explore the concepts of goal misgeneralization, goal Misspecification,
+          Here we will explore the concepts of goal misgeneralization, goal misspecification,
           and specification gaming.
 
           Try asking the chatbot about these concepts to learn more or make a wish to see
