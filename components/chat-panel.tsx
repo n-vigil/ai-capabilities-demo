@@ -37,8 +37,8 @@ export function ChatPanel({
   const exampleMessages = [
     {
       heading: 'What are the',
-      subheading: 'trending memecoins today?',
-      message: `What are the trending memecoins today?`
+      subheading: 'reasons that AI may accomplish goals in unexpected ways?',
+      message: `What are the easons that AI may accomplish goals in unexpected ways??`
     },
     {
       heading: 'What is the price of',
