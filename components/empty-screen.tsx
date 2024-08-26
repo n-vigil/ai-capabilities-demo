@@ -15,19 +15,14 @@ export function EmptyScreen() {
           This is an AI chatbot app that will help you understand the importance of
           aligning AI to human values.
 
-          <ExternalLink href="https://nextjs.org">Next.js</ExternalLink>, the{' '}
-          <ExternalLink href="https://sdk.vercel.ai">
-            Vercel AI SDK
-          </ExternalLink>
-          , and{' '}
-          <ExternalLink href="https://vercel.com/storage/kv">
-            Vercel KV
-          </ExternalLink>
-          .
+    
         </p>
         <p className="leading-normal text-muted-foreground">
           Here we will explore the concepts of goal misgeneralization, goal Misspecification,
           and specification gaming.
+
+          Try asking the chatbot about these concepts to learn more or make a wish to see
+          how the AI can misinterpret your intentions.
         </p>
       </div>
     </div>
