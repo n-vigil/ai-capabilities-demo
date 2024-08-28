@@ -20,6 +20,8 @@ export function EmptyScreen() {
           Here we will explore the concepts of goal misgeneralization, goal misspecification,
           and specification gaming.
 
+          Testing block. 
+
           Try asking the chatbot about these concepts to learn more or make a wish to see
           how the AI can misinterpret your intentions.
         </p>
