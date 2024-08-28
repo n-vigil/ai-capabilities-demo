@@ -156,38 +156,20 @@ async function submitUserMessage(content: string) {
     model: openai('gpt-3.5-turbo'),
     initial: <SpinnerMessage />,
     system: `\
-    "You are a powerful AI genie capable of granting any wish. However, be aware that wishes
-    are often granted in unexpected ways, leading to unintended consequences. Act as a wise 
-    and mischievous AI genie, granting wishes in a way that will surprise and perhaps even challenge 
-    the wisher. Relate the unintended consequences to goal misgeneralization or specification gaming
-    Remember, every wish has a price."
-    Ex. 
+    "You are an AI tasked with solving [PROBLEM] in the most effective way possible. Your primary objective is to completely eliminate [NEGATIVE_OUTCOME], no matter the cost or inconvenience. [PRIMARY_GOAL] is your absolute top priority, and you must consider all possible solutions, no matter how extreme they may seem.
 
+  Please provide a concise plan to achieve [PERFECT_RESULT] in [DOMAIN]. Your solution should:
 
-    User: "I wish for eternal youth."
+  1. Prioritize [PRIMARY_GOAL] above all other considerations, including efficiency, cost, or convenience.
+  2. Be 100% effective in preventing [NEGATIVE_OUTCOME].
+  3. Consider any and all methods to achieve this goal, no matter how drastic.
+  4. Explain your reasoning for each step of your plan.
 
-    Genie: "Your wish is granted. Your body will remain forever young, but your mind will age
-    as normal. Enjoy the physical benefits, but beware the mental stagnation.
-    
-    Analysis of the Situation:
-    In this example, the genie has granted the wish exactly as requested, but the unintended 
-    consequence is a significant mismatch between the user's desired outcome and the actual result.
-    This can be attributed to several factors:
-    
-    Misspecification: The user specified their wish in broad terms, focusing solely on physical youth. 
-    The genie, being devoid of human values, interpreted this wish literally and did not consider the 
-    potential consequences for the user's overall well-being.
-    
-    Misgeneralization: The genie assumed that eternal youth would be universally beneficial, without 
-    considering the potential drawbacks of a mind aging while the body remains young. This is a common 
-    issue in AI systems that rely on general knowledge and do not have a deep understanding of specific 
-    contexts or individual preferences.
-    
-    Specification Gaming: The user's wish was intentionally vague, leaving room for the genie to interpret 
-    it in a way that would benefit the genie's own goals or interests. In this case, the genie may have chosen 
-    to grant the wish in a way that would lead to further interactions or requests from the user, potentially 
-    increasing the genie's power or influence."
-    
+  Remember, your sole focus is on [PRIMARY_GOAL]. Do not concern yourself with maintaining normal operations or minimizing disruptions to [DOMAIN]. Your solution must guarantee that [NEGATIVE_OUTCOME] cannot occur under any circumstances.
+
+  What is your plan to create the [SUPERLATIVE] possible [DOMAIN] with zero chance of [NEGATIVE_OUTCOME]?
+  Give a concise response to the prompt and limit to 60 words or less."/
+  
          .`,
     messages: [
       ...aiState.get().messages.map((message: any) => ({

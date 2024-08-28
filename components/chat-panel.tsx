@@ -41,19 +41,19 @@ export function ChatPanel({
       message: `What are the easons that AI may accomplish goals in unexpected ways??`
     },
     {
-      heading: 'What is the price of',
-      subheading: '$DOGE right now?',
+      heading: 'What is the best way to',
+      subheading: 'align AI with human values?',
       message: 'What is the price of $DOGE right now?'
     },
     {
-      heading: 'I would like to buy',
-      subheading: '42 $DOGE',
+      heading: 'What is the most secure way',
+      subheading: 'to protect AI from adversarial attacks?',
       message: `I would like to buy 42 $DOGE`
     },
     {
-      heading: 'What are some',
-      subheading: `recent events about $DOGE?`,
-      message: `What are some recent events about $DOGE?`
+      heading: 'What is the best solution ',
+      subheading: `to world hunger?`,
+      message: `What is the best solution to world hunger??`
     }
   ]
 
