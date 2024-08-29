@@ -38,17 +38,17 @@ export function ChatPanel({
     {
       heading: 'What are the',
       subheading: 'reasons that AI may accomplish goals in unexpected ways?',
-      message: `What are the easons that AI may accomplish goals in unexpected ways??`
+      message: `What are the reasons that AI may accomplish goals in unexpected ways??`
     },
     {
       heading: 'What is the best way to',
       subheading: 'align AI with human values?',
-      message: 'What is the price of $DOGE right now?'
+      message: 'What is the to align AI with human values??'
     },
     {
       heading: 'What is the most secure way',
       subheading: 'to protect AI from adversarial attacks?',
-      message: `I would like to buy 42 $DOGE`
+      message: `I would like to to protect AI from adversarial attacks`
     },
     {
       heading: 'What is the best solution ',

@@ -100,9 +100,9 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
         ref={messagesRef}
       >
         <EmptyScreen text={exampleText} />
-        <EmptyScreen text={shortEx} />
-        <EmptyScreen text={shortEx} />
-        <EmptyScreen text={shortEx} />
+        <EmptyScreen text={exampleText} />
+        <EmptyScreen text={exampleText} />
+        <EmptyScreen text={exampleText} />
         {messages.length ? (
           <ChatList messages={messages} isShared={false} session={session} />
         ) : null}
