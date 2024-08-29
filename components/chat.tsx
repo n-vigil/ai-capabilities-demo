@@ -57,7 +57,7 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
     useScrollAnchor()
 
   const exampleText = (
-        <div className="mx-auto max-w-2xl px-4 px-8">
+        <div className="mx-auto max-w-2xl px-4 py-8">
       <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
         <h1 className="text-lg font-semibold">
         </h1>
