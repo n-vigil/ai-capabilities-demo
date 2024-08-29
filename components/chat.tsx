@@ -56,6 +56,40 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
   const { messagesRef, scrollRef, visibilityRef, isAtBottom, scrollToBottom } =
     useScrollAnchor()
 
+  const exampleText = (
+        <div className="mx-auto max-w-2xl px-4 px-8">
+      <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
+        <h1 className="text-lg font-semibold">
+        </h1>
+        <p className="leading-normal text-muted-foreground">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididuntut labore et dolore magna aliqua.
+          This is an AI chatbot app that will help you understand the importance of
+          aligning AI to human values.
+
+        </p>
+        <p className="leading-normal text-muted-foreground">
+          Here we will explore the concepts of goal misgeneralization, goal misspecification,
+          and specification gaming.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididuntut labore et dolore magna aliqua.
+
+          Testing block. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididuntut labore et dolore magna aliqua.
+
+          Try asking the chatbot about these concepts to learn more or make a wish to see
+          how the AI can interpret or misinterpret your intentions. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididuntut labore et dolore magna aliqua.
+        </p>
+      </div>
+    </div>
+  )
+  const shortEx = (
+    <div className="mx-auto max-w-2xl px-4 px-8">
+      <h1>Lorem ipsum</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  );
+
   return (
     <div
       className="group w-full overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
@@ -65,8 +99,10 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
         className={cn('pb-[200px] pt-4 md:pt-10', className)}
         ref={messagesRef}
       >
-        <EmptyScreen text={"hello world"} />
-        <EmptyScreen text={ 'text efjeiog fjeiogjerp g fndgujiwegknlweo'} />
+        <EmptyScreen text={exampleText} />
+        <EmptyScreen text={shortEx} />
+        <EmptyScreen text={shortEx} />
+        <EmptyScreen text={shortEx} />
         {messages.length ? (
           <ChatList messages={messages} isShared={false} session={session} />
         ) : null}
