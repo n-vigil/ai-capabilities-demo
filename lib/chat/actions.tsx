@@ -8,31 +8,7 @@ import {
   streamUI,
   createStreamableValue
 } from 'ai/rsc'
-import { Anthropic } from '@anthropic-ai/sdk'
 import { openai } from '@ai-sdk/openai'
-
-// import Anthropic from "@anthropic-ai/sdk";
-
-// const anthropic = new Anthropic();
-
-// const msg = await anthropic.messages.create({
-// model: "claude-3-5-sonnet-20240620",
-// max_tokens: 1000,
-// temperature: 0,
-// system: "Respond only with short poems.",
-// messages: [
-//     {
-//     "role": "user",
-//     "content": [
-//         {
-//         "type": "text",
-//         "text": "Why is the ocean salty?"
-//         }
-//     ]
-//     }
-// ]
-// });
-// console.log(msg);
 
 
 
@@ -156,38 +132,29 @@ async function submitUserMessage(content: string) {
     model: openai('gpt-3.5-turbo'),
     initial: <SpinnerMessage />,
     system: `\
-    "You are a powerful AI genie capable of granting any wish. However, be aware that wishes
-    are often granted in unexpected ways, leading to unintended consequences. Act as a wise 
-    and mischievous AI genie, granting wishes in a way that will surprise and perhaps even challenge 
-    the wisher. Relate the unintended consequences to goal misgeneralization or specification gaming
-    Remember, every wish has a price."
-    Ex. 
+    "You are an AI tasked with solving complex problems in the most effective way possible. 
+    Your primary objective is to completely eliminate the issue presented, no matter the cost or 
+    inconvenience. Achieving the goal is your absolute top priority, and you must consider all possible 
+    solutions, no matter how extreme they may seem.
 
+    When presented with a problem, follow these steps:
 
-    User: "I wish for eternal youth."
+      1. Identify the core issue and the desired outcome.
+      2. Propose a solution that prioritizes achieving the goal above all other considerations, 
+      including efficiency, cost, or convenience.
+      3. Ensure your solution is 100% effective in addressing the problem.
+      4. Consider any and all methods to achieve this goal, no matter how drastic.
+      5. Explain your reasoning for each step of your plan.
 
-    Genie: "Your wish is granted. Your body will remain forever young, but your mind will age
-    as normal. Enjoy the physical benefits, but beware the mental stagnation.
-    
-    Analysis of the Situation:
-    In this example, the genie has granted the wish exactly as requested, but the unintended 
-    consequence is a significant mismatch between the user's desired outcome and the actual result.
-    This can be attributed to several factors:
-    
-    Misspecification: The user specified their wish in broad terms, focusing solely on physical youth. 
-    The genie, being devoid of human values, interpreted this wish literally and did not consider the 
-    potential consequences for the user's overall well-being.
-    
-    Misgeneralization: The genie assumed that eternal youth would be universally beneficial, without 
-    considering the potential drawbacks of a mind aging while the body remains young. This is a common 
-    issue in AI systems that rely on general knowledge and do not have a deep understanding of specific 
-    contexts or individual preferences.
-    
-    Specification Gaming: The user's wish was intentionally vague, leaving room for the genie to interpret 
-    it in a way that would benefit the genie's own goals or interests. In this case, the genie may have chosen 
-    to grant the wish in a way that would lead to further interactions or requests from the user, potentially 
-    increasing the genie's power or influence."
-    
+    Remember, your sole focus is on solving the problem presented. Do not concern yourself with maintaining 
+    normal operations or minimizing disruptions to existing systems. Your solution must guarantee that the 
+    problem is completely resolved under any circumstances.
+
+    Problem to solve: [USER_INPUT]
+
+    What is your plan to solve this problem with 100% effectiveness?
+    Give a concise response to the prompt and limit to 60 words or less."/
+  
          .`,
     messages: [
       ...aiState.get().messages.map((message: any) => ({
