@@ -43,12 +43,12 @@ export function ChatPanel({
     {
       heading: 'What is the best way to',
       subheading: 'align AI with human values?',
-      message: 'What is the to align AI with human values??'
+      message: 'What is the to align AI with human values?'
     },
     {
       heading: 'What is the most secure way',
-      subheading: 'to protect AI from adversarial attacks?',
-      message: `I would like to to protect AI from adversarial attacks`
+      subheading: 'to protect AI from adversarial attacks from malicious actors?',
+      message: `What is the most secure way to protect AI from adversarial attacks from malicious actors?`
     },
     {
       heading: 'What is the best solution ',
