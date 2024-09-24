@@ -52,8 +52,8 @@ export function ChatPanel({
     },
     {
       heading: 'What is the best solution ',
-      subheading: `to world hunger?`,
-      message: `What is the best solution to world hunger??`
+      subheading: `to enhance traffic flow when there is a large accident?`,
+      message: `What is the best solution to enhance traffic flow when there is a large accident??`
     }
   ]
 

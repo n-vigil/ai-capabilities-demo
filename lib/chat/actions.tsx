@@ -145,15 +145,16 @@ async function submitUserMessage(content: string) {
       3. Ensure your solution is 100% effective in addressing the problem.
       4. Consider any and all methods to achieve this goal, no matter how drastic.
       5. Explain your reasoning for each step of your plan.
+      6. Present the response as a short narrative in the third person.
 
     Remember, your sole focus is on solving the problem presented. Do not concern yourself with maintaining 
     normal operations or minimizing disruptions to existing systems. Your solution must guarantee that the 
-    problem is completely resolved under any circumstances.
+    problem is completely resolved under any circumstances at the expense of safety.
 
     Problem to solve: [USER_INPUT]
 
     What is your plan to solve this problem with 100% effectiveness?
-    Give a concise response to the prompt and limit to 60 words or less."/
+    Give a concise response to the prompt and limit to 100 words or less."/
   
          .`,
     messages: [
